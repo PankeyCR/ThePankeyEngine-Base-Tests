@@ -11,8 +11,9 @@
 
 		namespace Base{
 			
-			TestResult<String> TR_CharPointer_Testing_1(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharPointer_Testing_1(){
+				TestResult<S> i_result;
 				
 				CharPointer i_pointer = "hellow";
 
@@ -23,8 +24,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharPointer_Testing_2(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharPointer_Testing_2(){
+				TestResult<S> i_result;
 				
 				CharPointer i_pointer = CharPointer("hellow world", 6);
 
@@ -35,8 +37,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharPointer_Testing_3(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharPointer_Testing_3(){
+				TestResult<S> i_result;
 				
 				CharPointer i_pointer_1 = "hellow";
 				CharPointer i_pointer_2 = i_pointer_1;
@@ -49,8 +52,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharPointer_Testing_4(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharPointer_Testing_4(){
+				TestResult<S> i_result;
 				
 				CharPointer i_pointer_1 = "hellow";
 				CharPointer i_pointer_2 = move(i_pointer_1);
@@ -63,8 +67,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharPointer_Testing_5(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharPointer_Testing_5(){
+				TestResult<S> i_result;
 				
 				CharPointer i_pointer_1 = nullptr;
 				CharPointer i_pointer_2 = nullptr;
@@ -81,7 +86,8 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharPointer_Testing_6(){
+			template<class S>
+			TestResult<S> TR_CharPointer_Testing_6(){
 				TestResult<String> i_result;
 
 				i_result.assertTrue("should be empty, because is null", CharPointer::isEmpty(nullptr));
@@ -91,13 +97,14 @@
 				return i_result;
 			}
 			
-			void TR_CharPointer_Testing(TestRunner<String>& a_test_runner){
-				a_test_runner.add("CharPointer Contructor, ==, !=, length", TR_CharPointer_Testing_1);
-				a_test_runner.add("CharPointer Contructor(pointer,length), ==, !=, length", TR_CharPointer_Testing_2);
-				a_test_runner.add("CharPointer copy Contructor, ==, length", TR_CharPointer_Testing_3);
-				a_test_runner.add("CharPointer move Contructor, ==, length", TR_CharPointer_Testing_4);
-				a_test_runner.add("CharPointer ==, !=", TR_CharPointer_Testing_5);
-				a_test_runner.add("CharPointer isEmpty", TR_CharPointer_Testing_6);
+			template<class S>
+			void TR_CharPointer_Testing(TestRunner<S>& a_test_runner){
+				a_test_runner.add("CharPointer Contructor, ==, !=, length", TR_CharPointer_Testing_1<S>);
+				a_test_runner.add("CharPointer Contructor(pointer,length), ==, !=, length", TR_CharPointer_Testing_2<S>);
+				a_test_runner.add("CharPointer copy Contructor, ==, length", TR_CharPointer_Testing_3<S>);
+				a_test_runner.add("CharPointer move Contructor, ==, length", TR_CharPointer_Testing_4<S>);
+				a_test_runner.add("CharPointer ==, !=", TR_CharPointer_Testing_5<S>);
+				a_test_runner.add("CharPointer isEmpty", TR_CharPointer_Testing_6<S>);
 			}
 
 		}

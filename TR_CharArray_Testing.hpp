@@ -11,8 +11,9 @@
 
 		namespace Base{
 			
-			TestResult<String> TR_CharArray_Testing_1(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_1(){
+				TestResult<S> i_result;
 
 				CharArray i_bool_1 = CharArray(true);
 				CharArray i_bool_2 = CharArray(false);
@@ -28,8 +29,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_2(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_2(){
+				TestResult<S> i_result;
 
 				CharArray i_bool_1;
 				CharArray i_bool_2;
@@ -55,8 +57,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_3(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_3(){
+				TestResult<S> i_result;
 
 				CharArray i_bool_1;
 				CharArray i_bool_2;
@@ -75,8 +78,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_4(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_4(){
+				TestResult<S> i_result;
 
 				CharArray i_str_1 = "hellow world";
 				CharArray i_str_2 = "hellow world";
@@ -93,8 +97,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_5(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_5(){
+				TestResult<S> i_result;
 
 				CharArray i_str_1 = "hellow world";
 				
@@ -108,8 +113,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_6(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_6(){
+				TestResult<S> i_result;
 
 				CharArray i_bool_1 = CharArray(true);
 				CharArray i_bool_2 = CharArray(false);
@@ -124,8 +130,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_7(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_7(){
+				TestResult<S> i_result;
 
 				int i_positive_size = CharArray::intCharSize(12345);
 				int i_negative_size = CharArray::intCharSize(-12345);
@@ -136,8 +143,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_8(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_8(){
+				TestResult<S> i_result;
 				
 				i_result.assertTrue("CharArray 0 is number", CharArray::isNumber('0'));
 				i_result.assertTrue("CharArray 1 is number", CharArray::isNumber('1'));
@@ -156,8 +164,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_9(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_9(){
+				TestResult<S> i_result;
 				
 				i_result.assertEqual("CharArray 0 is number", CharArray::getNumber('0'), 0);
 				i_result.assertEqual("CharArray 1 is number", CharArray::getNumber('1'), 1);
@@ -176,8 +185,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_10(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_10(){
+				TestResult<S> i_result;
 				
 				i_result.assertTrue("CharArray should be a decimal point", CharArray::isDecimalPoint('.'));
 				i_result.assertTrue("CharArray shouldnt be a decimal point", !CharArray::isDecimalPoint('1'));
@@ -185,8 +195,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_11(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_11(){
+				TestResult<S> i_result;
 
 				CharArray i_int_1 = CharArray(12345);
 				CharArray i_int_2 = CharArray(-12345);
@@ -203,8 +214,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_12(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_12(){
+				TestResult<S> i_result;
 
 				CharArray i_int_1 = CharArray(12345);
 				CharArray i_int_2 = CharArray(-12345);
@@ -217,8 +229,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_13(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_13(){
+				TestResult<S> i_result;
 
 				CharArray i_str = "hellow";
 				i_str.addCharPointer(" world");
@@ -228,8 +241,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_14(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_14(){
+				TestResult<S> i_result;
 
 				CharArray i_str_1 = "hellow";
 				CharArray i_str_2 = i_str_1 + " world";
@@ -239,8 +253,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_15(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_15(){
+				TestResult<S> i_result;
 
 				CharArray i_str_1 = "hellow";
 				CharArray i_str_2 = " ";
@@ -252,8 +267,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_16(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_16(){
+				TestResult<S> i_result;
 
 				CharArray i_str_1 = "hellow world";
 				CharPointer i_pointer = i_str_1.c_str();
@@ -263,8 +279,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_17(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_17(){
+				TestResult<S> i_result;
 
 				CharArray i_str = CharArray('x');
 				
@@ -273,8 +290,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_18(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_18(){
+				TestResult<S> i_result;
 				
 				i_result.assertEqual("CharArray long size should be 6", CharArray::longCharSize(123456l), 6);
 				i_result.assertEqual("CharArray long size should be 10", CharArray::longCharSize(123456789l), 9);
@@ -282,8 +300,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_19(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_19(){
+				TestResult<S> i_result;
 
 				CharArray i_long = CharArray(123456789l);
 				
@@ -295,16 +314,18 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_20(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_20(){
+				TestResult<S> i_result;
 				
 				i_result.assertEqual("Decimals should be 0.12f", CharArray::getDecimals(152.12f, 4, true), 0.12f);
 				
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_21(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_21(){
+				TestResult<S> i_result;
 
 				CharArray i_float = CharArray(152.1234f);
 				
@@ -319,8 +340,9 @@
 				return i_result;
 			}
 			
-			TestResult<String> TR_CharArray_Testing_22(){
-				TestResult<String> i_result;
+			template<class S>
+			TestResult<S> TR_CharArray_Testing_22(){
+				TestResult<S> i_result;
 
 				CharArray i_float = CharArray("float: ") + CharArray(15);
 				
@@ -329,29 +351,30 @@
 				return i_result;
 			}
 			
-			void TR_CharArray_Testing(TestRunner<String>& a_test_runner){
-				a_test_runner.add("CharArray Constructor(bool)", TR_CharArray_Testing_1);
-				a_test_runner.add("CharArray setBool(bool,bool)", TR_CharArray_Testing_2);
-				a_test_runner.add("CharArray setBool(bool)", TR_CharArray_Testing_3);
-				a_test_runner.add("CharArray ==(CharArray)", TR_CharArray_Testing_4);
-				a_test_runner.add("CharArray ==(char*)", TR_CharArray_Testing_5);
-				a_test_runner.add("CharArray toBool", TR_CharArray_Testing_6);
-				a_test_runner.add("CharArray intCharSize", TR_CharArray_Testing_7);
-				a_test_runner.add("CharArray isNumber(char)", TR_CharArray_Testing_8);
-				a_test_runner.add("CharArray getNumber(char)", TR_CharArray_Testing_9);
-				a_test_runner.add("CharArray isDecimalPoint(char)", TR_CharArray_Testing_10);
-				a_test_runner.add("CharArray setInt", TR_CharArray_Testing_11);
-				a_test_runner.add("CharArray toInt", TR_CharArray_Testing_12);
-				a_test_runner.add("CharArray addCharPointer", TR_CharArray_Testing_13);
-				a_test_runner.add("CharArray +(char*)", TR_CharArray_Testing_14);
-				a_test_runner.add("CharArray +(const CharArray&)", TR_CharArray_Testing_15);
-				a_test_runner.add("CharArray c_str, CharPointer==", TR_CharArray_Testing_16);
-				a_test_runner.add("CharArray Constructor(char)", TR_CharArray_Testing_17);
-				a_test_runner.add("CharArray longCharSize", TR_CharArray_Testing_18);
-				a_test_runner.add("CharArray Constructor(long)", TR_CharArray_Testing_19);
-				a_test_runner.add("CharArray getDecimals", TR_CharArray_Testing_20);
-				a_test_runner.add("CharArray setFloat", TR_CharArray_Testing_21);
-				a_test_runner.add("CharArray operator+", TR_CharArray_Testing_22);
+			template<class S>
+			void TR_CharArray_Testing(TestRunner<S>& a_test_runner){
+				a_test_runner.add("CharArray Constructor(bool)", TR_CharArray_Testing_1<S>);
+				a_test_runner.add("CharArray setBool(bool,bool)", TR_CharArray_Testing_2<S>);
+				a_test_runner.add("CharArray setBool(bool)", TR_CharArray_Testing_3<S>);
+				a_test_runner.add("CharArray ==(CharArray)", TR_CharArray_Testing_4<S>);
+				a_test_runner.add("CharArray ==(char*)", TR_CharArray_Testing_5<S>);
+				a_test_runner.add("CharArray toBool", TR_CharArray_Testing_6<S>);
+				a_test_runner.add("CharArray intCharSize", TR_CharArray_Testing_7<S>);
+				a_test_runner.add("CharArray isNumber(char)", TR_CharArray_Testing_8<S>);
+				a_test_runner.add("CharArray getNumber(char)", TR_CharArray_Testing_9<S>);
+				a_test_runner.add("CharArray isDecimalPoint(char)", TR_CharArray_Testing_10<S>);
+				a_test_runner.add("CharArray setInt", TR_CharArray_Testing_11<S>);
+				a_test_runner.add("CharArray toInt", TR_CharArray_Testing_12<S>);
+				a_test_runner.add("CharArray addCharPointer", TR_CharArray_Testing_13<S>);
+				a_test_runner.add("CharArray +(char*)", TR_CharArray_Testing_14<S>);
+				a_test_runner.add("CharArray +(const CharArray&)", TR_CharArray_Testing_15<S>);
+				a_test_runner.add("CharArray c_str, CharPointer==", TR_CharArray_Testing_16<S>);
+				a_test_runner.add("CharArray Constructor(char)", TR_CharArray_Testing_17<S>);
+				a_test_runner.add("CharArray longCharSize", TR_CharArray_Testing_18<S>);
+				a_test_runner.add("CharArray Constructor(long)", TR_CharArray_Testing_19<S>);
+				a_test_runner.add("CharArray getDecimals", TR_CharArray_Testing_20<S>);
+				a_test_runner.add("CharArray setFloat", TR_CharArray_Testing_21<S>);
+				a_test_runner.add("CharArray operator+", TR_CharArray_Testing_22<S>);
 			}
 		}
 	}
