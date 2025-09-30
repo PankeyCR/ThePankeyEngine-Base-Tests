@@ -88,7 +88,7 @@
 			
 			template<class S>
 			TestResult<S> TR_CharPointer_Testing_6(){
-				TestResult<String> i_result;
+				TestResult<S> i_result;
 
 				i_result.assertTrue("should be empty, because is null", CharPointer::isEmpty(nullptr));
 				i_result.assertTrue("should be empty, because has no length", CharPointer::isEmpty(""));
